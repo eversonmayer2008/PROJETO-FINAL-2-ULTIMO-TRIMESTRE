@@ -53,7 +53,7 @@
             padding: 0 2rem;
         }
 
-        /* Header Ultra Premium */
+        /* Header */
         header {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(30px) saturate(180%);
@@ -191,7 +191,7 @@
             left: 100%;
         }
 
-        /* Hero Section Ultra Premium */
+        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--darker) 0%, #1a202c 50%, #2d3748 100%);
             color: white;
@@ -451,7 +451,7 @@
             color: #94a3b8;
         }
 
-        /* Features Section Ultra Premium */
+        /* Features Section */
         .features {
             padding: 10rem 0;
             background: white;
@@ -610,7 +610,7 @@
             transform: translateX(5px);
         }
 
-        /* Interactive Database Visualization */
+        /* Database Section */
         .database {
             padding: 10rem 0;
             background: linear-gradient(135deg, var(--darker) 0%, #1a202c 100%);
@@ -790,7 +790,7 @@
             font-weight: 700;
         }
 
-        /* Enhanced Relationships Section */
+        /* Relationships Section */
         .relationships {
             padding: 10rem 0;
             background: white;
@@ -870,7 +870,493 @@
             transform: scale(1.2);
         }
 
-        /* Ultra Premium Footer */
+        /* Statistics Section */
+        .statistics {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border-radius: var(--radius-xl);
+            padding: 3rem 2rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #fff, #c7d2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            color: #e2e8f0;
+            font-weight: 600;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 10rem 0;
+            background: #f8fafc;
+            position: relative;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 5rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 3rem;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #f1f5f9;
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            font-size: 5rem;
+            color: var(--primary-light);
+            opacity: 0.2;
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--gradient-premium);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .author-info h4 {
+            font-weight: 800;
+            margin-bottom: 0.3rem;
+            color: var(--darker);
+        }
+
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 10rem 0;
+            background: white;
+            position: relative;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 5rem;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 3rem;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid #f1f5f9;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--primary);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: var(--gradient-premium);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-bottom-left-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .pricing-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .pricing-title {
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: var(--darker);
+        }
+
+        .pricing-price {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            background: var(--gradient-premium);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .pricing-period {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 3rem;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: var(--gray);
+        }
+
+        .pricing-features li i {
+            color: var(--secondary);
+            font-size: 1.2rem;
+        }
+
+        /* User Management Section */
+        .user-management {
+            padding: 8rem 0;
+            background: white;
+            position: relative;
+        }
+
+        .user-management-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 4rem;
+        }
+
+        .user-management-title {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--darker);
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--darker) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .user-management-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .user-management-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .user-form-container, .user-list-container {
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            border: 1px solid #f1f5f9;
+        }
+
+        .user-form-title, .user-list-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            color: var(--darker);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .user-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .form-input {
+            padding: 1rem 1.5rem;
+            border: 2px solid #e2e8f0;
+            border-radius: var(--radius);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .password-container {
+            position: relative;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .toggle-password:hover {
+            color: var(--primary);
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem 0;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        .remember-me input {
+            width: 18px;
+            height: 18px;
+        }
+
+        .form-button {
+            background: var(--gradient-premium);
+            color: white;
+            border: none;
+            padding: 1.2rem 2rem;
+            border-radius: var(--radius);
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow);
+            margin-top: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .form-button:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .form-button:hover:before {
+            left: 100%;
+        }
+
+        .form-button:active {
+            transform: translateY(-1px);
+        }
+
+        .user-list {
+            max-height: 500px;
+            overflow-y: auto;
+            border-radius: var(--radius);
+            border: 1px solid #e2e8f0;
+        }
+
+        .user-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            border-bottom: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .user-item:last-child {
+            border-bottom: none;
+        }
+
+        .user-item:hover {
+            background: #f8fafc;
+        }
+
+        .user-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .user-name {
+            font-weight: 700;
+            color: var(--darker);
+        }
+
+        .user-email {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .user-actions {
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .action-btn {
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .edit-btn {
+            color: var(--primary);
+        }
+
+        .edit-btn:hover {
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .delete-btn {
+            color: #ef4444;
+        }
+
+        .delete-btn:hover {
+            background: rgba(239, 68, 68, 0.1);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: var(--gray);
+        }
+
+        .empty-state i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        /* Footer */
         footer {
             background: linear-gradient(135deg, var(--darker) 0%, #1a202c 100%);
             color: white;
@@ -931,21 +1417,356 @@
             font-size: 1.1rem;
         }
 
-        /* Advanced Particles System */
-        .particles {
+        /* Login Modal Styles */
+        .login-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(15px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .login-modal.active {
+            display: flex;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .login-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 1200px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            min-height: 700px;
+            position: relative;
+            z-index: 2;
+            animation: slideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .login-left {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-left::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: 1;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" opacity="0.05"><path fill="%23ffffff" d="M0,0H600V600H0Z"/><circle cx="150" cy="150" r="40" fill="%23ffffff"/><circle cx="450" cy="450" r="60" fill="%23ffffff"/><circle cx="300" cy="300" r="30" fill="%23ffffff"/><rect x="200" y="200" width="80" height="80" fill="%23ffffff"/></svg>');
         }
 
-        .particle {
+        .login-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #fff, #c7d2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .login-logo i {
+            font-size: 3rem;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+        }
+
+        .welcome-title {
+            font-size: 2.8rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #fff, #c7d2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .welcome-text {
+            font-size: 1.2rem;
+            color: #e2e8f0;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 3rem;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .features-list i {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .testimonial {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--accent);
+            margin-top: 2rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .login-right {
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .login-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--darker);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .login-subtitle {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 2rem 0;
+            color: var(--gray);
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        .divider span {
+            padding: 0 1rem;
+            font-weight: 500;
+        }
+
+        .social-login {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: var(--radius);
+            background: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .social-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .social-button.google {
+            color: #db4437;
+        }
+
+        .social-button.google:hover {
+            border-color: #db4437;
+            background: rgba(219, 68, 55, 0.05);
+        }
+
+        .social-button.github {
+            color: #333;
+        }
+
+        .social-button.github:hover {
+            border-color: #333;
+            background: rgba(51, 51, 51, 0.05);
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--gray);
+        }
+
+        .register-link a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            margin-left: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .register-link a:hover {
+            color: var(--primary-dark);
+        }
+
+        .close-modal {
             position: absolute;
-            background: rgba(255, 255, 255, 0.15);
+            top: 2rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            color: var(--gray);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            z-index: 10;
+        }
+
+        .close-modal:hover {
+            color: var(--primary);
+        }
+
+        /* User Menu */
+        .user-menu {
+            display: none;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .user-menu.active {
+            display: flex;
+        }
+
+        .user-avatar {
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            pointer-events: none;
+            background: var(--gradient-premium);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .user-name {
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .logout-btn {
+            background: none;
+            border: none;
+            color: var(--gray);
+            cursor: pointer;
+            transition: color 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .logout-btn:hover {
+            color: var(--primary);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-premium);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: var(--shadow-xl);
         }
 
         /* Responsive Design */
@@ -973,6 +1794,26 @@
             
             .features-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .user-management-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 968px) {
+            .login-container {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+            
+            .login-left {
+                display: none;
+            }
+            
+            .login-right {
+                padding: 3rem 2rem;
             }
         }
 
@@ -1006,6 +1847,50 @@
             .database-visual {
                 grid-template-columns: 1fr;
             }
+            
+            .social-login {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-options {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-10px);
+            }
+            
+            .user-management-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .login-right {
+                padding: 2rem 1.5rem;
+            }
+            
+            .login-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .user-form-container, .user-list-container {
+                padding: 2rem 1.5rem;
+            }
         }
     </style>
 </head>
@@ -1022,9 +1907,17 @@
                     <li><a href="#features">Recursos</a></li>
                     <li><a href="#database">Banco de Dados</a></li>
                     <li><a href="#relationships">Relacionamentos</a></li>
-                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#pricing">Planos</a></li>
+                    <li><a href="#user-management">Usuários</a></li>
                 </ul>
-                <a href="#demo" class="cta-button">Demonstração <i class="fas fa-arrow-right"></i></a>
+                <div class="user-menu" id="userMenu">
+                    <div class="user-avatar" id="userAvatar">U</div>
+                    <div class="user-name" id="userName">Usuário</div>
+                    <button class="logout-btn" id="logoutBtn">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+                <a href="#" class="cta-button" id="loginBtn">Entrar <i class="fas fa-arrow-right"></i></a>
             </nav>
         </div>
     </header>
@@ -1041,7 +1934,7 @@
                         <a href="#features" class="btn btn-primary">
                             <i class="fas fa-rocket"></i> Explorar Recursos
                         </a>
-                        <a href="#demo" class="btn btn-secondary">
+                        <a href="#" class="btn btn-secondary" id="demoBtn">
                             <i class="fas fa-play-circle"></i> Ver Demonstração
                         </a>
                     </div>
@@ -1158,9 +2051,46 @@
         </div>
     </section>
 
+    <!-- Statistics Section -->
+    <section class="statistics">
+        <div class="particles" id="particles2"></div>
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-count="15000">0</div>
+                    <div class="stat-label">Usuários Ativos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="stat-number" data-count="500000">0</div>
+                    <div class="stat-label">Livros Catalogados</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="stat-number" data-count="75000">0</div>
+                    <div class="stat-label">Empréstimos Realizados</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-number" data-count="4.9">0</div>
+                    <div class="stat-label">Avaliação Média</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Features Section -->
     <section id="features" class="features">
-        <div class="particles" id="particles2"></div>
+        <div class="particles" id="particles3"></div>
         <div class="container">
             <div class="section-header">
                 <div class="section-subtitle">Recursos Exclusivos</div>
@@ -1198,13 +2128,43 @@
                         Saiba mais <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Análises Avançadas</h3>
+                    <p class="feature-desc">Relatórios detalhados e estatísticas sobre seus hábitos de leitura para ajudar você a otimizar sua experiência literária.</p>
+                    <a href="#" class="feature-link">
+                        Saiba mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Segurança Máxima</h3>
+                    <p class="feature-desc">Proteção de dados com criptografia de ponta a ponta e autenticação de múltiplos fatores para garantir sua privacidade.</p>
+                    <a href="#" class="feature-link">
+                        Saiba mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Sincronização em Nuvem</h3>
+                    <p class="feature-desc">Acesse sua biblioteca de qualquer dispositivo com sincronização automática e em tempo real de todos os seus dados.</p>
+                    <a href="#" class="feature-link">
+                        Saiba mais <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Database Section -->
     <section id="database" class="database">
-        <div class="particles" id="particles3"></div>
+        <div class="particles" id="particles4"></div>
         <div class="container">
             <div class="section-header">
                 <div class="section-subtitle">Arquitetura de Dados</div>
@@ -1342,14 +2302,232 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Depoimentos</div>
+                <h2 class="section-title">O Que Nossos Usuários Dizem</h2>
+                <p class="section-desc">Descubra como o Bibliotech está transformando a experiência de leitura de milhares de usuários ao redor do mundo.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "O Bibliotech revolucionou completamente minha forma de organizar minha biblioteca pessoal. Agora consigo controlar empréstimos, fazer recomendações e acompanhar minhas leituras de forma simples e intuitiva."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Maria Silva</h4>
+                            <p>Professora e Bibliófila</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Como administrador de uma biblioteca comunitária, o Bibliotech nos permitiu digitalizar todo nosso acervo e otimizar nossos processos. O sistema de empréstimos é incrivelmente eficiente!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">C</div>
+                        <div class="author-info">
+                            <h4>Carlos Mendes</h4>
+                            <p>Administrador de Biblioteca</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "A funcionalidade de rede social do Bibliotech me conectou com outros amantes de livros. Compartilhamos recomendações, organizamos clubes de leitura e trocamos livros regularmente."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Ana Rodrigues</h4>
+                            <p>Escritora e Crítica Literária</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">Planos e Preços</div>
+                <h2 class="section-title">Escolha o Plano Perfeito para Você</h2>
+                <p class="section-desc">Oferecemos soluções flexíveis para atender desde leitores individuais até grandes bibliotecas institucionais.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Básico</h3>
+                        <div class="pricing-price">R$ 0</div>
+                        <div class="pricing-period">para sempre</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Até 100 livros</li>
+                        <li><i class="fas fa-check"></i> Catálogo pessoal</li>
+                        <li><i class="fas fa-check"></i> Empréstimos básicos</li>
+                        <li><i class="fas fa-times"></i> Rede social</li>
+                        <li><i class="fas fa-times"></i> Relatórios avançados</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Começar Agora</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Premium</h3>
+                        <div class="pricing-price">R$ 19<span>,90</span></div>
+                        <div class="pricing-period">por mês</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Livros ilimitados</li>
+                        <li><i class="fas fa-check"></i> Catálogo avançado</li>
+                        <li><i class="fas fa-check"></i> Sistema de empréstimos</li>
+                        <li><i class="fas fa-check"></i> Rede social completa</li>
+                        <li><i class="fas fa-check"></i> Relatórios detalhados</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Experimente Grátis</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Empresarial</h3>
+                        <div class="pricing-price">Personalizado</div>
+                        <div class="pricing-period">sob consulta</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Múltiplos usuários</li>
+                        <li><i class="fas fa-check"></i> Catálogo corporativo</li>
+                        <li><i class="fas fa-check"></i> Controle de acesso</li>
+                        <li><i class="fas fa-check"></i> API personalizada</li>
+                        <li><i class="fas fa-check"></i> Suporte prioritário</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary">Fale Conosco</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Management Section -->
+    <section id="user-management" class="user-management">
+        <div class="container">
+            <div class="user-management-header">
+                <h2 class="user-management-title">Gerenciamento de Usuários</h2>
+                <p class="user-management-subtitle">Cadastre novos usuários ou gerencie os existentes. Todos os dados são armazenados localmente no seu navegador.</p>
+            </div>
+            
+            <div class="user-management-grid">
+                <!-- User Registration Form -->
+                <div class="user-form-container">
+                    <h3 class="user-form-title">
+                        <i class="fas fa-user-plus"></i>
+                        Cadastrar Novo Usuário
+                    </h3>
+                    <form class="user-form" id="userForm">
+                        <div class="form-group">
+                            <label class="form-label" for="name">
+                                <i class="fas fa-user"></i>
+                                Nome Completo
+                            </label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                class="form-input" 
+                                placeholder="Digite o nome completo"
+                                required
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="email">
+                                <i class="fas fa-envelope"></i>
+                                E-mail
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                class="form-input" 
+                                placeholder="seu@email.com"
+                                required
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="password">
+                                <i class="fas fa-lock"></i>
+                                Senha
+                            </label>
+                            <div class="password-container">
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    class="form-input" 
+                                    placeholder="Crie uma senha segura"
+                                    required
+                                >
+                                <button type="button" class="toggle-password" id="togglePassword">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="phone">
+                                <i class="fas fa-phone"></i>
+                                Telefone
+                            </label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                class="form-input" 
+                                placeholder="(11) 99999-9999"
+                            >
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="remember-me">
+                                <input type="checkbox" id="admin">
+                                Usuário Administrador
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="form-button">
+                            <i class="fas fa-save"></i>
+                            Cadastrar Usuário
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- User List -->
+                <div class="user-list-container">
+                    <h3 class="user-list-title">
+                        <i class="fas fa-users"></i>
+                        Usuários Cadastrados
+                    </h3>
+                    <div class="user-list" id="userList">
+                        <!-- Users will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer id="about">
-        <div class="particles" id="particles4"></div>
+        <div class="particles" id="particles5"></div>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Bibliotech</h3>
                     <p>Sistema revolucionário de gerenciamento de biblioteca pessoal com tecnologia de ponta, design inovador e performance excepcional.</p>
+                    <div class="social-links" style="margin-top: 2rem; display: flex; gap: 1rem;">
+                        <a href="#" style="color: #94a3b8; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: #94a3b8; font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: #94a3b8; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: #94a3b8; font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
                 <div class="footer-column">
                     <h3>Recursos</h3>
@@ -1358,6 +2536,7 @@
                         <li><a href="#"><i class="fas fa-exchange-alt"></i> Controle de Empréstimos</a></li>
                         <li><a href="#"><i class="fas fa-star"></i> Sistema de Avaliações</a></li>
                         <li><a href="#"><i class="fas fa-users"></i> Rede Social</a></li>
+                        <li><a href="#"><i class="fas fa-chart-line"></i> Relatórios e Estatísticas</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -1367,6 +2546,7 @@
                         <li><a href="#"><i class="fas fa-shield-alt"></i> Firebase Auth</a></li>
                         <li><a href="#"><i class="fas fa-code"></i> HTML5/CSS3</a></li>
                         <li><a href="#"><i class="fab fa-js"></i> JavaScript</a></li>
+                        <li><a href="#"><i class="fas fa-mobile-alt"></i> Aplicativo Móvel</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -1376,6 +2556,7 @@
                         <li><a href="#"><i class="fas fa-headset"></i> Suporte</a></li>
                         <li><a href="#"><i class="fas fa-play-circle"></i> Demonstração</a></li>
                         <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
+                        <li><a href="#"><i class="fas fa-bug"></i> Reportar Bug</a></li>
                     </ul>
                 </div>
             </div>
@@ -1385,15 +2566,157 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Login Modal -->
+    <div class="login-modal" id="loginModal">
+        <button class="close-modal" id="closeModal">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="login-container">
+            <div class="login-left">
+                <div class="login-logo">
+                    <i class="fas fa-books"></i>
+                    <span>Bibliotech</span>
+                </div>
+                
+                <h1 class="welcome-title">Bem-vindo de volta!</h1>
+                <p class="welcome-text">Acesse sua biblioteca pessoal e continue sua jornada literária de onde parou.</p>
+                
+                <ul class="features-list">
+                    <li>
+                        <i class="fas fa-book"></i>
+                        <span>Acesse seu catálogo completo</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-exchange-alt"></i>
+                        <span>Gerencie seus empréstimos</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-users"></i>
+                        <span>Conecte-se com amigos leitores</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-chart-line"></i>
+                        <span>Acompanhe suas estatísticas</span>
+                    </li>
+                </ul>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"O Bibliotech transformou completamente minha forma de organizar e compartilhar meus livros. Uma experiência incrível!"</p>
+                    <div class="testimonial-author">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Maria Silva, Usuária Premium</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="login-right">
+                <div class="login-header">
+                    <h1 class="login-title">Fazer Login</h1>
+                    <p class="login-subtitle">Entre na sua conta para acessar sua biblioteca</p>
+                </div>
+                
+                <form class="login-form" id="loginForm">
+                    <div class="form-group">
+                        <label class="form-label" for="loginEmail">
+                            <i class="fas fa-envelope"></i>
+                            E-mail
+                        </label>
+                        <input 
+                            type="email" 
+                            id="loginEmail" 
+                            class="form-input" 
+                            placeholder="seu@email.com"
+                            required
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="loginPassword">
+                            <i class="fas fa-lock"></i>
+                            Senha
+                        </label>
+                        <div class="password-container">
+                            <input 
+                                type="password" 
+                                id="loginPassword" 
+                                class="form-input" 
+                                placeholder="Sua senha"
+                                required
+                            >
+                            <button type="button" class="toggle-password" id="toggleLoginPassword">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" id="loginRemember">
+                            Lembrar de mim
+                        </label>
+                        <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                    </div>
+                    
+                    <button type="submit" class="form-button">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Entrar na Biblioteca
+                    </button>
+                </form>
+                
+                <div class="divider">
+                    <span>Ou continue com</span>
+                </div>
+                
+                <div class="social-login">
+                    <button class="social-button google">
+                        <i class="fab fa-google"></i>
+                        Google
+                    </button>
+                    <button class="social-button github">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </button>
+                </div>
+                
+                <div class="register-link">
+                    Não tem uma conta?
+                    <a href="#">Cadastre-se gratuitamente</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Enhanced Header scroll effect
         window.addEventListener('scroll', function() {
             const header = document.getElementById('header');
+            const backToTop = document.getElementById('backToTop');
+            
             if (window.scrollY > 50) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
+            
+            // Show/hide back to top button
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Back to top functionality
+        document.getElementById('backToTop').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
 
         // Enhanced smooth scrolling
@@ -1410,96 +2733,439 @@
             });
         });
 
-        // Advanced particles system
-        function createParticles(containerId, count) {
-            const container = document.getElementById(containerId);
-            if (!container) return;
+        // User Database Simulation (using localStorage)
+        class UserDatabase {
+            constructor() {
+                this.key = 'bibliotech_users';
+                this.users = this.loadUsers();
+            }
             
-            for (let i = 0; i < count; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                
-                const size = Math.random() * 6 + 2;
-                const posX = Math.random() * 100;
-                const posY = Math.random() * 100;
-                const opacity = Math.random() * 0.4 + 0.1;
-                const animationDuration = Math.random() * 25 + 15;
-                const animationDelay = Math.random() * 5;
-                
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-                particle.style.left = `${posX}%`;
-                particle.style.top = `${posY}%`;
-                particle.style.opacity = opacity;
-                particle.style.animation = `float ${animationDuration}s ease-in-out ${animationDelay}s infinite`;
-                
-                container.appendChild(particle);
+            loadUsers() {
+                const stored = localStorage.getItem(this.key);
+                return stored ? JSON.parse(stored) : [];
+            }
+            
+            saveUsers() {
+                localStorage.setItem(this.key, JSON.stringify(this.users));
+            }
+            
+            addUser(user) {
+                user.id = Date.now().toString();
+                user.createdAt = new Date().toISOString();
+                this.users.push(user);
+                this.saveUsers();
+                return user;
+            }
+            
+            getAllUsers() {
+                return this.users;
+            }
+            
+            getUserById(id) {
+                return this.users.find(user => user.id === id);
+            }
+            
+            updateUser(id, updatedUser) {
+                const index = this.users.findIndex(user => user.id === id);
+                if (index !== -1) {
+                    this.users[index] = { ...this.users[index], ...updatedUser };
+                    this.saveUsers();
+                    return this.users[index];
+                }
+                return null;
+            }
+            
+            deleteUser(id) {
+                const index = this.users.findIndex(user => user.id === id);
+                if (index !== -1) {
+                    this.users.splice(index, 1);
+                    this.saveUsers();
+                    return true;
+                }
+                return false;
+            }
+            
+            clearAllUsers() {
+                this.users = [];
+                this.saveUsers();
             }
         }
 
-        // Initialize enhanced particles
-        createParticles('particles', 40);
-        createParticles('particles2', 35);
-        createParticles('particles3', 30);
-        createParticles('particles4', 25);
+        // Initialize user database
+        const userDB = new UserDatabase();
 
-        // Advanced animation on scroll
-        const observerOptions = {
-            threshold: 0.05,
-            rootMargin: '0px 0px -100px 0px'
-        };
+        // User Management Functions
+        function renderUserList() {
+            const userList = document.getElementById('userList');
+            const users = userDB.getAllUsers();
+            
+            if (users.length === 0) {
+                userList.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-users"></i>
+                        <h3>Nenhum usuário cadastrado</h3>
+                        <p>Cadastre o primeiro usuário usando o formulário ao lado.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            userList.innerHTML = users.map(user => `
+                <div class="user-item" data-user-id="${user.id}">
+                    <div class="user-info">
+                        <div class="user-name">${user.name}</div>
+                        <div class="user-email">${user.email}</div>
+                        <div class="user-meta">
+                            <small>Cadastrado em: ${new Date(user.createdAt).toLocaleDateString('pt-BR')}</small>
+                            ${user.isAdmin ? '<span style="color: var(--accent); font-weight: 600;">• Administrador</span>' : ''}
+                        </div>
+                    </div>
+                    <div class="user-actions">
+                        <button class="action-btn edit-btn" onclick="editUser('${user.id}')">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="action-btn delete-btn" onclick="deleteUser('${user.id}')">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
 
-        const observer = new IntersectionObserver((entries) => {
+        function addUser(userData) {
+            const user = userDB.addUser(userData);
+            renderUserList();
+            showMessage('Usuário cadastrado com sucesso!', 'success');
+            return user;
+        }
+
+        function editUser(userId) {
+            const user = userDB.getUserById(userId);
+            if (user) {
+                // Preenche o formulário com os dados do usuário
+                document.getElementById('name').value = user.name;
+                document.getElementById('email').value = user.email;
+                document.getElementById('phone').value = user.phone || '';
+                document.getElementById('admin').checked = user.isAdmin || false;
+                
+                // Altera o botão para "Atualizar Usuário"
+                const submitButton = document.querySelector('#userForm button[type="submit"]');
+                submitButton.innerHTML = '<i class="fas fa-sync-alt"></i> Atualizar Usuário';
+                submitButton.dataset.editing = userId;
+                
+                showMessage('Preencha os dados e clique em "Atualizar Usuário" para salvar as alterações.', 'info');
+            }
+        }
+
+        function deleteUser(userId) {
+            if (confirm('Tem certeza que deseja excluir este usuário? Esta ação não pode ser desfeita.')) {
+                const success = userDB.deleteUser(userId);
+                if (success) {
+                    renderUserList();
+                    showMessage('Usuário excluído com sucesso!', 'success');
+                } else {
+                    showMessage('Erro ao excluir usuário.', 'error');
+                }
+            }
+        }
+
+        function clearForm() {
+            document.getElementById('userForm').reset();
+            const submitButton = document.querySelector('#userForm button[type="submit"]');
+            submitButton.innerHTML = '<i class="fas fa-save"></i> Cadastrar Usuário';
+            delete submitButton.dataset.editing;
+        }
+
+        // User Form Submission
+        document.getElementById('userForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const phone = document.getElementById('phone').value;
+            const isAdmin = document.getElementById('admin').checked;
+            
+            const userData = {
+                name,
+                email,
+                password, // In a real app, this should be hashed
+                phone,
+                isAdmin
+            };
+            
+            const submitButton = this.querySelector('button[type="submit"]');
+            const isEditing = submitButton.dataset.editing;
+            
+            if (isEditing) {
+                // Update existing user
+                const updatedUser = userDB.updateUser(isEditing, userData);
+                if (updatedUser) {
+                    renderUserList();
+                    clearForm();
+                    showMessage('Usuário atualizado com sucesso!', 'success');
+                } else {
+                    showMessage('Erro ao atualizar usuário.', 'error');
+                }
+            } else {
+                // Add new user
+                addUser(userData);
+                clearForm();
+            }
+        });
+
+        // Toggle password visibility
+        function setupPasswordToggle(buttonId, inputId) {
+            const toggleButton = document.getElementById(buttonId);
+            const passwordInput = document.getElementById(inputId);
+            
+            if (toggleButton && passwordInput) {
+                toggleButton.addEventListener('click', function() {
+                    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                    passwordInput.setAttribute('type', type);
+                    
+                    // Change icon
+                    this.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
+                });
+            }
+        }
+
+        // Setup password toggles
+        setupPasswordToggle('togglePassword', 'password');
+        setupPasswordToggle('toggleLoginPassword', 'loginPassword');
+
+        // Statistics Counter Animation
+        function animateCounter(element, target, duration) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start);
+                }
+            }, 16);
+        }
+
+        // Animate statistics when they come into view
+        const statsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0) scale(1)';
-                    entry.target.style.filter = 'blur(0)';
+                    const statNumber = entry.target.querySelector('.stat-number');
+                    const target = parseInt(statNumber.getAttribute('data-count'));
+                    
+                    if (statNumber.textContent === '0') {
+                        if (target === 4.9) {
+                            // Special case for rating
+                            let current = 0;
+                            const timer = setInterval(() => {
+                                current += 0.1;
+                                if (current >= target) {
+                                    statNumber.textContent = target.toFixed(1);
+                                    clearInterval(timer);
+                                } else {
+                                    statNumber.textContent = current.toFixed(1);
+                                }
+                            }, 30);
+                        } else {
+                            animateCounter(statNumber, target, 2000);
+                        }
+                    }
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.5 });
 
-        // Enhanced animations for all interactive elements
-        document.querySelectorAll('.feature-card, .database-card, .rel-entity, .entity-item').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(40px) scale(0.95)';
-            card.style.filter = 'blur(5px)';
-            card.style.transition = 'opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease';
-            observer.observe(card);
+        document.querySelectorAll('.stat-card').forEach(card => {
+            statsObserver.observe(card);
         });
 
-        // Interactive hover effects for relationship items
-        document.querySelectorAll('.relationship-item').forEach((item, index) => {
-            item.style.animationDelay = `${index * 0.3}s`;
-            item.style.transition = 'all 0.5s ease';
+        // Login Modal Functionality
+        const loginModal = document.getElementById('loginModal');
+        const loginBtn = document.getElementById('loginBtn');
+        const demoBtn = document.getElementById('demoBtn');
+        const closeModal = document.getElementById('closeModal');
+        const userMenu = document.getElementById('userMenu');
+        const userAvatar = document.getElementById('userAvatar');
+        const userName = document.getElementById('userName');
+        const logoutBtn = document.getElementById('logoutBtn');
+
+        // Open login modal
+        loginBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
         });
 
-        // Dynamic gradient animation
-        function updateGradient() {
-            const hue = (Date.now() / 10000) % 360;
-            document.documentElement.style.setProperty('--primary', `hsl(${hue}, 86%, 65%)`);
-            requestAnimationFrame(updateGradient);
-        }
-        
-        // Uncomment for dynamic gradient (may affect performance)
-        // updateGradient();
+        // Demo button also opens login modal
+        demoBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
 
-        // Enhanced cursor effects
-        document.addEventListener('mousemove', (e) => {
-            const cards = document.querySelectorAll('.card-3d');
-            cards.forEach(card => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
+        // Close login modal
+        closeModal.addEventListener('click', function() {
+            loginModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal when clicking outside
+        loginModal.addEventListener('click', function(e) {
+            if (e.target === loginModal) {
+                loginModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Login form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            const remember = document.getElementById('loginRemember').checked;
+            
+            // Basic validation
+            if (!email || !password) {
+                showMessage('Por favor, preencha todos os campos.', 'error');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showMessage('Por favor, insira um e-mail válido.', 'error');
+                return;
+            }
+            
+            // Simulate login process
+            const loginButton = this.querySelector('button[type="submit"]');
+            const originalText = loginButton.innerHTML;
+            
+            loginButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Entrando...';
+            loginButton.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                // In a real application, you would validate credentials with your backend
+                showMessage('Login realizado com sucesso! Redirecionando...', 'success');
                 
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
+                // Update UI for logged in user
+                const name = email.split('@')[0];
+                userName.textContent = name;
+                userAvatar.textContent = name.charAt(0).toUpperCase();
+                userMenu.classList.add('active');
+                loginBtn.style.display = 'none';
                 
-                const rotateY = (x - centerX) / 25;
-                const rotateX = (centerY - y) / 25;
+                // Reset button
+                setTimeout(() => {
+                    loginButton.innerHTML = originalText;
+                    loginButton.disabled = false;
+                    
+                    // Close modal
+                    loginModal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }, 2000);
                 
-                card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            }, 1500);
+        });
+
+        // Logout functionality
+        logoutBtn.addEventListener('click', function() {
+            userMenu.classList.remove('active');
+            loginBtn.style.display = 'flex';
+            showMessage('Logout realizado com sucesso!', 'success');
+        });
+
+        // Social login buttons
+        document.querySelectorAll('.social-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const provider = this.classList.contains('google') ? 'Google' : 'GitHub';
+                showMessage(`Redirecionando para login com ${provider}...`, 'success');
+                
+                // In a real application, you would redirect to OAuth flow
+                setTimeout(() => {
+                    showMessage(`Login com ${provider} em desenvolvimento`, 'error');
+                }, 1000);
             });
+        });
+
+        // Show message function
+        function showMessage(message, type) {
+            // Remove existing message
+            const existingMessage = document.querySelector('.message');
+            if (existingMessage) {
+                existingMessage.remove();
+            }
+            
+            // Create new message
+            const messageEl = document.createElement('div');
+            messageEl.className = `message ${type}`;
+            messageEl.textContent = message;
+            messageEl.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 1rem 1.5rem;
+                border-radius: 10px;
+                color: white;
+                font-weight: 600;
+                z-index: 1000;
+                animation: slideIn 0.3s ease;
+                background: ${type === 'error' ? '#ef4444' : type === 'info' ? '#3b82f6' : '#10b981'};
+                box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            `;
+            
+            document.body.appendChild(messageEl);
+            
+            // Remove message after 5 seconds
+            setTimeout(() => {
+                messageEl.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => {
+                    messageEl.remove();
+                }, 300);
+            }, 5000);
+        }
+
+        // Add keyframes for message animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            renderUserList();
+            
+            // Add some sample users if the database is empty
+            if (userDB.getAllUsers().length === 0) {
+                addUser({
+                    name: 'Administrador',
+                    email: 'admin@bibliotech.com',
+                    password: 'admin123',
+                    phone: '(11) 99999-9999',
+                    isAdmin: true
+                });
+                
+                addUser({
+                    name: 'João Silva',
+                    email: 'joao.silva@email.com',
+                    password: 'senha123',
+                    phone: '(11) 98888-8888',
+                    isAdmin: false
+                });
+            }
         });
     </script>
 </body>
