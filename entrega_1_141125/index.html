@@ -26,6 +26,9 @@
             --light: #f8fafc;
             --gray: #64748b;
             --gray-light: #cbd5e1;
+            --success: #10b981;
+            --error: #ef4444;
+            --warning: #f59e0b;
             --gradient: linear-gradient(135deg, #6366f1, #8b5cf6);
             --gradient-dark: linear-gradient(135deg, #4f46e5, #7c3aed);
             --gradient-accent: linear-gradient(135deg, #f59e0b, #f97316);
@@ -1739,6 +1742,88 @@
             color: var(--primary);
         }
 
+        /* Dashboard Section */
+        .dashboard {
+            display: none;
+            padding: 10rem 0;
+            background: white;
+            position: relative;
+        }
+
+        .dashboard.active {
+            display: block;
+        }
+
+        .dashboard-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 4rem;
+        }
+
+        .dashboard-title {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--darker);
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--darker) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .dashboard-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .dashboard-card {
+            background: white;
+            border-radius: var(--radius-xl);
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            border: 1px solid #f1f5f9;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: center;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .dashboard-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            background: var(--gradient-premium);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+        }
+
+        .dashboard-card h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--darker);
+        }
+
+        .dashboard-card p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
         /* Back to Top Button */
         .back-to-top {
             position: fixed;
@@ -1909,6 +1994,7 @@
                     <li><a href="#relationships">Relacionamentos</a></li>
                     <li><a href="#pricing">Planos</a></li>
                     <li><a href="#user-management">Usuários</a></li>
+                    <li><a href="#dashboard" class="dashboard-link" style="display: none;">Dashboard</a></li>
                 </ul>
                 <div class="user-menu" id="userMenu">
                     <div class="user-avatar" id="userAvatar">U</div>
@@ -2046,6 +2132,50 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <h2 class="dashboard-title">Dashboard do Usuário</h2>
+                <p class="dashboard-subtitle">Bem-vindo à sua área pessoal. Aqui você pode gerenciar sua biblioteca e configurações.</p>
+            </div>
+            
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Minha Biblioteca</h3>
+                    <p>Acesse e gerencie sua coleção pessoal de livros, organize por categorias e adicione novas leituras.</p>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>Empréstimos</h3>
+                    <p>Controle os livros que você emprestou ou pegou emprestado, com datas e lembretes automáticos.</p>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Estatísticas</h3>
+                    <p>Visualize suas métricas de leitura, tempo gasto lendo e progresso em suas metas literárias.</p>
+                </div>
+                
+                <div class="dashboard-card">
+                    <div class="dashboard-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3>Configurações</h3>
+                    <p>Personalize sua experiência, ajuste notificações e gerencie suas preferências de privacidade.</p>
                 </div>
             </div>
         </div>
@@ -2415,7 +2545,7 @@
         <div class="container">
             <div class="user-management-header">
                 <h2 class="user-management-title">Gerenciamento de Usuários</h2>
-                <p class="user-management-subtitle">Cadastre novos usuários ou gerencie os existentes. Todos os dados são armazenados localmente no seu navegador.</p>
+                <p class="user-management-subtitle">Cadastre novos usuários ou gerencie os existentes. Cada usuário terá acesso exclusivo com seu email e senha.</p>
             </div>
             
             <div class="user-management-grid">
@@ -2466,6 +2596,7 @@
                                     class="form-input" 
                                     placeholder="Crie uma senha segura"
                                     required
+                                    minlength="6"
                                 >
                                 <button type="button" class="toggle-password" id="togglePassword">
                                     <i class="fas fa-eye"></i>
@@ -2606,10 +2737,10 @@
                 </ul>
                 
                 <div class="testimonial">
-                    <p class="testimonial-text">"O Bibliotech transformou completamente minha forma de organizar e compartilhar meus livros. Uma experiência incrível!"</p>
+                    <p class="testimonial-text">"O sistema de autenticação do Bibliotech é incrivelmente seguro e fácil de usar. Minha biblioteca está sempre protegida!"</p>
                     <div class="testimonial-author">
                         <i class="fas fa-user-circle"></i>
-                        <span>Maria Silva, Usuária Premium</span>
+                        <span>Carlos Silva, Usuário Premium</span>
                     </div>
                 </div>
             </div>
@@ -2685,7 +2816,7 @@
                 
                 <div class="register-link">
                     Não tem uma conta?
-                    <a href="#">Cadastre-se gratuitamente</a>
+                    <a href="#user-management">Cadastre-se aqui</a>
                 </div>
             </div>
         </div>
@@ -2750,11 +2881,16 @@
             }
             
             addUser(user) {
+                // Check if email already exists
+                if (this.getUserByEmail(user.email)) {
+                    return { success: false, message: 'Este email já está cadastrado.' };
+                }
+                
                 user.id = Date.now().toString();
                 user.createdAt = new Date().toISOString();
                 this.users.push(user);
                 this.saveUsers();
-                return user;
+                return { success: true, user };
             }
             
             getAllUsers() {
@@ -2765,14 +2901,38 @@
                 return this.users.find(user => user.id === id);
             }
             
+            getUserByEmail(email) {
+                return this.users.find(user => user.email.toLowerCase() === email.toLowerCase());
+            }
+            
+            authenticateUser(email, password) {
+                const user = this.getUserByEmail(email);
+                if (!user) {
+                    return { success: false, message: 'Email não encontrado.' };
+                }
+                
+                if (user.password !== password) {
+                    return { success: false, message: 'Senha incorreta.' };
+                }
+                
+                return { success: true, user };
+            }
+            
             updateUser(id, updatedUser) {
                 const index = this.users.findIndex(user => user.id === id);
                 if (index !== -1) {
+                    // Check if email is being changed and if it already exists
+                    if (updatedUser.email && updatedUser.email !== this.users[index].email) {
+                        if (this.getUserByEmail(updatedUser.email)) {
+                            return { success: false, message: 'Este email já está cadastrado.' };
+                        }
+                    }
+                    
                     this.users[index] = { ...this.users[index], ...updatedUser };
                     this.saveUsers();
-                    return this.users[index];
+                    return { success: true, user: this.users[index] };
                 }
-                return null;
+                return { success: false, message: 'Usuário não encontrado.' };
             }
             
             deleteUser(id) {
@@ -2780,9 +2940,9 @@
                 if (index !== -1) {
                     this.users.splice(index, 1);
                     this.saveUsers();
-                    return true;
+                    return { success: true };
                 }
-                return false;
+                return { success: false, message: 'Usuário não encontrado.' };
             }
             
             clearAllUsers() {
@@ -2791,8 +2951,70 @@
             }
         }
 
-        // Initialize user database
+        // Authentication System
+        class AuthSystem {
+            constructor() {
+                this.currentUser = null;
+                this.isLoggedIn = false;
+                this.loadCurrentUser();
+            }
+            
+            loadCurrentUser() {
+                const storedUser = localStorage.getItem('bibliotech_current_user');
+                if (storedUser) {
+                    this.currentUser = JSON.parse(storedUser);
+                    this.isLoggedIn = true;
+                    this.updateUI();
+                }
+            }
+            
+            login(user) {
+                this.currentUser = user;
+                this.isLoggedIn = true;
+                localStorage.setItem('bibliotech_current_user', JSON.stringify(user));
+                this.updateUI();
+                return { success: true };
+            }
+            
+            logout() {
+                this.currentUser = null;
+                this.isLoggedIn = false;
+                localStorage.removeItem('bibliotech_current_user');
+                this.updateUI();
+                return { success: true };
+            }
+            
+            updateUI() {
+                const userMenu = document.getElementById('userMenu');
+                const userAvatar = document.getElementById('userAvatar');
+                const userName = document.getElementById('userName');
+                const loginBtn = document.getElementById('loginBtn');
+                const dashboardLink = document.querySelector('.dashboard-link');
+                const dashboardSection = document.getElementById('dashboard');
+                
+                if (this.isLoggedIn && this.currentUser) {
+                    userMenu.classList.add('active');
+                    userAvatar.textContent = this.currentUser.name.charAt(0).toUpperCase();
+                    userName.textContent = this.currentUser.name;
+                    loginBtn.style.display = 'none';
+                    dashboardLink.style.display = 'block';
+                    dashboardSection.classList.add('active');
+                } else {
+                    userMenu.classList.remove('active');
+                    loginBtn.style.display = 'flex';
+                    dashboardLink.style.display = 'none';
+                    dashboardSection.classList.remove('active');
+                }
+            }
+            
+            getCurrentUser() {
+                return this.currentUser;
+            }
+        }
+
+        // Initialize systems
         const userDB = new UserDatabase();
+        const authSystem = new AuthSystem();
 
         // User Management Functions
         function renderUserList() {
@@ -2833,10 +3055,15 @@
         }
 
         function addUser(userData) {
-            const user = userDB.addUser(userData);
-            renderUserList();
-            showMessage('Usuário cadastrado com sucesso!', 'success');
-            return user;
+            const result = userDB.addUser(userData);
+            if (result.success) {
+                renderUserList();
+                showMessage('Usuário cadastrado com sucesso!', 'success');
+                return result.user;
+            } else {
+                showMessage(result.message, 'error');
+                return null;
+            }
         }
 
         function editUser(userId) {
@@ -2859,12 +3086,12 @@
 
         function deleteUser(userId) {
             if (confirm('Tem certeza que deseja excluir este usuário? Esta ação não pode ser desfeita.')) {
-                const success = userDB.deleteUser(userId);
-                if (success) {
+                const result = userDB.deleteUser(userId);
+                if (result.success) {
                     renderUserList();
                     showMessage('Usuário excluído com sucesso!', 'success');
                 } else {
-                    showMessage('Erro ao excluir usuário.', 'error');
+                    showMessage(result.message, 'error');
                 }
             }
         }
@@ -2889,7 +3116,7 @@
             const userData = {
                 name,
                 email,
-                password, // In a real app, this should be hashed
+                password,
                 phone,
                 isAdmin
             };
@@ -2899,13 +3126,13 @@
             
             if (isEditing) {
                 // Update existing user
-                const updatedUser = userDB.updateUser(isEditing, userData);
-                if (updatedUser) {
+                const result = userDB.updateUser(isEditing, userData);
+                if (result.success) {
                     renderUserList();
                     clearForm();
                     showMessage('Usuário atualizado com sucesso!', 'success');
                 } else {
-                    showMessage('Erro ao atualizar usuário.', 'error');
+                    showMessage(result.message, 'error');
                 }
             } else {
                 // Add new user
@@ -2986,9 +3213,6 @@
         const loginBtn = document.getElementById('loginBtn');
         const demoBtn = document.getElementById('demoBtn');
         const closeModal = document.getElementById('closeModal');
-        const userMenu = document.getElementById('userMenu');
-        const userAvatar = document.getElementById('userAvatar');
-        const userName = document.getElementById('userName');
         const logoutBtn = document.getElementById('logoutBtn');
 
         // Open login modal
@@ -3025,7 +3249,6 @@
             
             const email = document.getElementById('loginEmail').value;
             const password = document.getElementById('loginPassword').value;
-            const remember = document.getElementById('loginRemember').checked;
             
             // Basic validation
             if (!email || !password) {
@@ -3047,35 +3270,32 @@
             loginButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Entrando...';
             loginButton.disabled = true;
             
-            // Simulate API call
+            // Authenticate user
             setTimeout(() => {
-                // In a real application, you would validate credentials with your backend
-                showMessage('Login realizado com sucesso! Redirecionando...', 'success');
+                const result = userDB.authenticateUser(email, password);
                 
-                // Update UI for logged in user
-                const name = email.split('@')[0];
-                userName.textContent = name;
-                userAvatar.textContent = name.charAt(0).toUpperCase();
-                userMenu.classList.add('active');
-                loginBtn.style.display = 'none';
+                if (result.success) {
+                    authSystem.login(result.user);
+                    showMessage('Login realizado com sucesso!', 'success');
+                    
+                    // Close modal after successful login
+                    setTimeout(() => {
+                        loginModal.classList.remove('active');
+                        document.body.style.overflow = 'auto';
+                    }, 1500);
+                } else {
+                    showMessage(result.message, 'error');
+                }
                 
                 // Reset button
-                setTimeout(() => {
-                    loginButton.innerHTML = originalText;
-                    loginButton.disabled = false;
-                    
-                    // Close modal
-                    loginModal.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                }, 2000);
-                
+                loginButton.innerHTML = originalText;
+                loginButton.disabled = false;
             }, 1500);
         });
 
         // Logout functionality
         logoutBtn.addEventListener('click', function() {
-            userMenu.classList.remove('active');
-            loginBtn.style.display = 'flex';
+            authSystem.logout();
             showMessage('Logout realizado com sucesso!', 'success');
         });
 
@@ -3083,12 +3303,7 @@
         document.querySelectorAll('.social-button').forEach(button => {
             button.addEventListener('click', function() {
                 const provider = this.classList.contains('google') ? 'Google' : 'GitHub';
-                showMessage(`Redirecionando para login com ${provider}...`, 'success');
-                
-                // In a real application, you would redirect to OAuth flow
-                setTimeout(() => {
-                    showMessage(`Login com ${provider} em desenvolvimento`, 'error');
-                }, 1000);
+                showMessage(`Login com ${provider} em desenvolvimento`, 'info');
             });
         });
 
@@ -3163,6 +3378,14 @@
                     email: 'joao.silva@email.com',
                     password: 'senha123',
                     phone: '(11) 98888-8888',
+                    isAdmin: false
+                });
+
+                addUser({
+                    name: 'Maria Santos',
+                    email: 'maria.santos@email.com',
+                    password: 'maria456',
+                    phone: '(11) 97777-7777',
                     isAdmin: false
                 });
             }
